@@ -10,25 +10,23 @@ cd 프로젝트 폴더명
 
 <h1>Step 2. 불필요한 파일 삭제</h1>
 <h2>public 폴더</h2>
-1) logo.192.png 삭제 <br />
-2) logo.512.png 삭제 <br />
+1) logo192.png 삭제 <br />
+2) logo512.png 삭제 <br />
 3) robots.txt 삭제 <br />
 <h2>src 폴더</h2>
-1) app.test 삭제 <br />
-2) logo.svg 삭제 <br />
-3) reportWebVitals.js 삭제 <br />
-4) setupTests.js 삭제 <br />
+1) app.js 삭제 <br />
+2) app.test 삭제 <br />
+3) logo.svg 삭제 <br />
+4) reportWebVitals.js 삭제 <br />
+5) setupTests.js 삭제 <br />
 <br />
-삭제 전<br />
-
-![image](https://user-images.githubusercontent.com/80687334/122746014-8dd68000-d2c4-11eb-96ad-f23b22058fe5.png)
-
 삭제 후 <br />
 
-![image](https://user-images.githubusercontent.com/80687334/122749116-e9eed380-d2c7-11eb-95f4-4c85710c1d63.png)
+![image](https://user-images.githubusercontent.com/80687334/122764197-2fb49780-d2da-11eb-90d8-c3e904c28d06.png)
 
 <h1>Step 3. Prettier 및 Eslint 설정 </h1>
 ※ https://prettier.io/docs/en/integrating-with-linters.html 를 참고하여 작성하였다. <br />
+<br />
 1. Eslint와 Prettier를 통합하고 충돌을 없애주기 위한 패키지를 설치한다.<br />
 
 ```jsx
@@ -89,9 +87,6 @@ npm install --save-dev eslint-plugin-prettier
 <h1>Step 4. 코드 정리</h1>
 <h3>public 폴더</h3>
 <h4>1. index.html</h4>
-수정 전<br />
-
-![image](https://user-images.githubusercontent.com/80687334/122748791-8e244a80-d2c7-11eb-9b95-85342e57ff43.png)
 
 수정 후<br />
 
@@ -99,27 +94,74 @@ npm install --save-dev eslint-plugin-prettier
 
 프로젝트에 따라 사용하게 될 부분은 주석처리로 남겨둠
 
-<h4>2. App.js</h4>
-수정 전<br />
-
-![image](https://user-images.githubusercontent.com/80687334/122758199-7bb00e00-d2d3-11eb-9980-318462c8a00a.png)
+<h4>2.index.js</h4>
 
 수정 후<br />
 
-![image](https://user-images.githubusercontent.com/80687334/122758272-8f5b7480-d2d3-11eb-83aa-d030373b1e5c.png)
+![image](https://user-images.githubusercontent.com/80687334/122763603-7a81df80-d2d9-11eb-844c-336feaaf16f8.png)
 
-<h4>3. App.css</h4>
-모든 내용을 지워준다.
+<h4>3.index.css</h4>
+모든 내용을 삭제한다.<br />
 
-<h4>4.index.js</h4>
-수정 전<br />
+<h1>Step 5. React Router 설치 및 설정</h1>
+1) React Router 설치
 
-![image](https://user-images.githubusercontent.com/80687334/122758388-b4e87e00-d2d3-11eb-85d8-c118420e01b7.png)
+```jsx
+npm install react-router-dom
+```
+<br />
+2) src 폴더에 Routes.jsx 파일을 만든다.<br />
+<br />
+3) 기본 코드를 입력해 준다.
 
-수정 후<br />
+```jsx
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-![image](https://user-images.githubusercontent.com/80687334/122758472-cb8ed500-d2d3-11eb-90a8-c5ed47c87be5.png)
+class Routes extends Component {
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route />
+        </Switch>
+      </Router>
+    );
+  }
+}
 
+export default Routes;
+```
+<br />
+4) index.js에 Routes.jsx를 import 해준다.
 
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Routes from './Routes';
 
+ReactDOM.render(<Routes />, document.getElementById('root'));
+```
+<br />
+<h1>Step 6. Reset.css 설정</h1>
+1) src 폴더 내에 styles 폴더를 만들고 그 안에 Reset.css 파일을 만든다.<br />
+<br />
+2) 설정을 입력해준다.<br />
+가장 기본적인 Reset 설정은 여기를 참고하면 된다.<br />
+https://meyerweb.com/eric/tools/css/reset/ <br /><br />
+3) index.js에 Reset.css를 import 해준다. <br />
+단, index.css보다 먼저 import 해야 한다. 그래야 초기화 후 css 적용이 이루어진다.
 
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles/Reset.css';
+import './index.css';
+import Routes from './Routes';
+
+ReactDOM.render(<Routes />, document.getElementById('root'));
+```
+
+<h1>이외 고려할 사항들</h1>
+1. SASS(SCSS), Stylus, Less 등과 같은 CSS 전처리기 설치 <br />
