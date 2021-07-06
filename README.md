@@ -165,3 +165,5 @@ ReactDOM.render(<Routes />, document.getElementById('root'));
 
 <h1>이외 고려할 사항들</h1>
 1. SASS(SCSS), Stylus, Less 등과 같은 CSS 전처리기 설치 <br />
+2. 프로젝트 성격에 맞게 폴더 구조 및 파일 이름 convention 통일 <br />
+3. 해당 프로젝트의 github에 연결하기
