@@ -103,14 +103,16 @@ npm install --save-dev eslint-plugin-prettier
 모든 내용을 삭제한다.<br />
 
 <h1>Step 5. React Router 설치 및 설정</h1>
+
+## v6 이전
 1) React Router 설치
 
 ```jsx
 npm install react-router-dom
 ```
-<br />
-2) src 폴더에 Routes.jsx 파일을 만들거나 App.jsx에 진행한다.<br />
-<br />
+
+2) src 폴더에 Routes.jsx 파일을 만들거나 App.jsx에 진행한다.
+
 3) 기본 코드를 입력해 준다.
 
 ```jsx
@@ -131,7 +133,7 @@ class Routes extends Component {
 
 export default Routes;
 ```
-<br />
+
 4) Routes.jsx를 만들었다면 index.js에 Routes.jsx를 import 해준다.
 
 ```jsx
@@ -142,7 +144,8 @@ import Routes from './Routes';
 
 ReactDOM.render(<Routes />, document.getElementById('root'));
 ```
-<br />
+
+
 <h1>Step 6. Reset.css 설정</h1>
 1) src 폴더 내에 styles 폴더를 만들고 그 안에 Reset.css 파일을 만든다.<br />
 <br />
