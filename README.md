@@ -14,11 +14,10 @@ cd 프로젝트 폴더명
 2) logo512.png 삭제 <br />
 3) robots.txt 삭제 <br />
 <h2>src 폴더</h2>
-1) app.js 삭제 <br />
-2) app.test 삭제 <br />
-3) logo.svg 삭제 <br />
-4) reportWebVitals.js 삭제 <br />
-5) setupTests.js 삭제 <br />
+1) app.test 삭제 <br />
+2) logo.svg 삭제 <br />
+3) reportWebVitals.js 삭제 <br />
+4) setupTests.js 삭제 <br />
 <br />
 삭제 후 <br />
 
@@ -110,7 +109,7 @@ npm install --save-dev eslint-plugin-prettier
 npm install react-router-dom
 ```
 <br />
-2) src 폴더에 Routes.jsx 파일을 만든다.<br />
+2) src 폴더에 Routes.jsx 파일을 만들거나 App.jsx에 진행한다.<br />
 <br />
 3) 기본 코드를 입력해 준다.
 
@@ -133,7 +132,7 @@ class Routes extends Component {
 export default Routes;
 ```
 <br />
-4) index.js에 Routes.jsx를 import 해준다.
+4) Routes.jsx를 만들었다면 index.js에 Routes.jsx를 import 해준다.
 
 ```jsx
 import React from 'react';
