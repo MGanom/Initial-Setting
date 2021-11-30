@@ -18,10 +18,6 @@ cd 프로젝트 폴더명
 2) logo.svg 삭제 <br />
 3) reportWebVitals.js 삭제 <br />
 4) setupTests.js 삭제 <br />
-<br />
-삭제 후 <br />
-
-![image](https://user-images.githubusercontent.com/80687334/122764197-2fb49780-d2da-11eb-90d8-c3e904c28d06.png)
 
 <h1>Step 3. Prettier 및 Eslint 설정 </h1>
 ※ https://prettier.io/docs/en/integrating-with-linters.html 를 참고하여 작성하였다. <br />
